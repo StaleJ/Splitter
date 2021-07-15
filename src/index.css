@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap'); /* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --Light-grayish-cyan-1: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-2: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Dark-grayish-cyan-1: hsl(184, 14%, 56%);
+    --Dark-grayish-cyan-2: hsl(186, 14%, 43%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Title {
+    color: var(--Very-dark-cyan);
+}
+
+.App {
+    background-color: var(--Light-grayish-cyan-1);
+    font-family: 'Space Mono', monospace;
+}
+
+.Card {
+    width: 62.5rem;
+    height: 31.25rem;
+    border-radius: 40px;
+    background-color: var(--White);
+    margin-left: auto;
+    margin-right: auto;
 }
