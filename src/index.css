@@ -30,3 +30,42 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.Bill-Input {
+    background-color: var(--Light-grayish-cyan-2);
+    text-align: right;
+    border-radius: 10px;
+}
+
+.Bill-Input-Field {
+    display: flex;
+    width: 311px;
+    height: 48px;
+    border: solid var(--Dark-grayish-cyan-2);
+    border-radius: 10px;
+    background-color: var(--Light-grayish-cyan-2);
+}
+
+.Dollar-Icon {
+    width: 18px;
+    height: 20px;
+    margin: auto;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}

@@ -1,6 +1,7 @@
 import './index.css'
 import Title from "./Components/Title";
 import Card from "./Components/Card";
+import Bill from "./Components/Bill";
 
 function App() {
   return (
