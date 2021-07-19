@@ -14,8 +14,13 @@
 
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
+
 .Title {
     color: var(--Very-dark-cyan);
+    padding-bottom: 10px;
 }
 
 .App {
@@ -51,17 +56,17 @@
 
 .Bill-Input-Field {
     display: flex;
-    width: 311px;
+    width: 379px;
     height: 48px;
     background-color: var(--Light-grayish-cyan-2);
     justify-content: space-around;
     align-items: center;
+    border-radius: 5px;
 }
 
 
 .Bill-Input-Field:hover {
     border: solid var(--Strong-cyan);
-    border-radius: 10px;
     border-width: 0.15em;
 }
 
@@ -70,6 +75,48 @@
     height: 16px;
     vertical-align: middle;
 
+}
+
+.Tip {
+    padding: 0px 50px 20px;
+}
+
+.Tip-Grid {
+    display: flex;
+    width: 379px;
+    height: 111px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    height: 48px;
+    width: 117px;
+    border-radius: 5px;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+}
+
+.Custom-Tip {
+    height: 48px;
+    width: 117px;
+    border-radius: 5px;
+    background-color: var(--Light-grayish-cyan-2);
+    text-align: center;
+
+}
+
+.Custom-Tip:focus {
+    text-align: right;
+    padding-right: 10px;
+    border: solid var(--Strong-cyan);
+    border-width: 0.15em;
+}
+
+
+button:focus {
+    background-color: var(--Strong-cyan);
 }
 
 input:focus,
