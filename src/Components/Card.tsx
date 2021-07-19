@@ -1,9 +1,9 @@
 import Bill from "./Bill";
 
 function Card() {
-    return(
+    return (
         <div className="Card">
-           <Bill/>
+            <Bill/>
         </div>
     );
 }

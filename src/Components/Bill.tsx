@@ -1,10 +1,6 @@
-// 48h and 379w
 import IconDollar from '../Static/icon-dollar.svg'
 
-
 function Bill() {
-
-
     return (
         <div className="Bill">
             <h3 className="Bill-Text">Bill</h3>
