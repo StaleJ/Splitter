@@ -1,6 +1,7 @@
 import Bill from "./Bill";
 import Tip from "./Tip";
 import People from "./People";
+import Amount from "./Amount";
 
 function Card() {
     return (
@@ -8,6 +9,7 @@ function Card() {
             <Bill/>
             <Tip/>
             <People/>
+            <Amount/>
         </div>
     );
 }

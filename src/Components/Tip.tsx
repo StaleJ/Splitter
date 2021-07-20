@@ -8,7 +8,7 @@ function Tip() {
                 <button>15%</button>
                 <button>20%</button>
                 <button>25%</button>
-                <input id="number" type="number" placeholder="Custom" className="Custom-Tip" />
+                <input id="number" type="number" placeholder="Custom" className="Custom-Tip"/>
             </div>
         </div>
     );
