@@ -1,7 +1,7 @@
 function Tip() {
     return (
         <div className="Tip">
-            <h3>Select Tip %</h3>
+            <h3 className="Bill-Text">Select Tip %</h3>
             <div className="Tip-Grid">
                 <button>5%</button>
                 <button>10%</button>

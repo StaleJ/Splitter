@@ -77,6 +77,12 @@ input:focus::placeholder {
 
 }
 
+.Person-Icon {
+    width: 14px;
+    height: 16px;
+    vertical-align: middle;
+}
+
 .Tip {
     padding: 0px 50px 20px;
 }
