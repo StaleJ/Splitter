@@ -136,11 +136,20 @@ button:focus {
     border-radius: 40px;
     display: grid;
     flex-direction: column;
-    grid-template-columns: 103px 109px 109px 109px;
+    grid-template-columns: 103px 103px 103px 103px;
     grid-template-rows: 69.5px 69.5px 69.5px 69.5px 69.5px 69.5px;
     grid-template-areas:
             "th3 th3 th1 th1"
-            "th4 th4 th1 th1";
+            "th4 th4 th1 th1"
+            "toth3 toth3 toth1 toth1"
+            "toth4 toth4 toth1 toth1"
+            ". R R .";
+}
+
+.Amount-Reset {
+    grid-area: R;
+    background-color: var(--Dark-grayish-cyan-1);
+    width: 206px;
 }
 
 .Tip-h3 {
@@ -169,6 +178,35 @@ button:focus {
     grid-area: th4;
     text-align: center;
     font-size: 12px;
+}
+
+.Total-h1 {
+    height: 48px;
+    width: 208px;
+    float: right;
+    grid-area: toth1;
+    text-align: center;
+    padding-top: 38px;
+    font-size: 35px;
+    color: var(--Strong-cyan);
+}
+
+.Total-h3 {
+    width: 208px;
+    grid-area: toth3;
+    text-align: start;
+    padding-top: 46px;
+    color: var(--White);
+    font-size: 18px;
+    padding-left: 25%;
+}
+
+.Total-h4 {
+    width: 208px;
+    grid-area: toth4;
+    text-align: center;
+    font-size: 12px;
+
 }
 
 input:focus,
