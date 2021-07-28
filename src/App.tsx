@@ -15,10 +15,10 @@ type Tip = {
 
 const defaultTip: Tip = {
     bill: 0,
-    selectTip: 0,
-    numberOfPeople: 0,
+    selectTip: 5,
+    numberOfPeople: 1,
     tipAmount: 0,
-    total: 0.0
+    total: 0
 }
 
 function App() {
@@ -29,11 +29,33 @@ function App() {
     };
 
     function handleBill(event: React.ChangeEvent<HTMLInputElement>) {
-        let tipAmount = parseFloat(event.currentTarget.value);
-        if (isNaN(tipAmount)) {
-            onChangeTip('tipAmount', 0)
-        } else onChangeTip('tipAmount', tipAmount);
-        
+        tip.bill = parseFloat(event.currentTarget.value);
+        if (isNaN(tip.bill)) {
+            tip.bill = 0;
+        }
+        handleTipAmount()
+    }
+
+    function handleNumberOfPeople(event: React.ChangeEvent<HTMLInputElement>) {
+        tip.numberOfPeople = parseInt(event.currentTarget.value);
+        if (isNaN(tip.numberOfPeople)) {
+            tip.numberOfPeople = 1;
+        }
+        handleTipAmount();
+
+    }
+
+    function handleSelectTip(event: React.ChangeEvent<HTMLInputElement>) {
+        tip.selectTip = parseFloat(event.currentTarget.value);
+    }
+
+    function handleTipAmount() {
+        let value = ((tip.selectTip * tip.bill) / 100) / tip.numberOfPeople;
+        onChangeTip("tipAmount", value)
+    }
+
+    function handleReset() {
+        setTip(defaultTip);
     }
 
     return (
@@ -67,7 +89,8 @@ function App() {
                     <h3 className="Bill-Text">Number of People</h3>
                     <div className="Bill-Input-Field">
                         <img src={IconPerson} alt="Person icon" className="Person-Icon"/>
-                        <input id="number" type="number" placeholder="0" className="Bill-Input"/>
+                        <input id="number" type="number" placeholder="0" className="Bill-Input"
+                               onChange={handleNumberOfPeople}/>
                     </div>
                 </div>
                 <div className="Amount">
@@ -77,7 +100,7 @@ function App() {
                     <h3 className="Total-h3">Total</h3>
                     <h4 className="Total-h4">/ person</h4>
                     <h1 className="Total-h1">${tip.total}</h1>
-                    <button className="Amount-Reset">Reset</button>
+                    <button className="Amount-Reset" onClick={handleReset}>Reset</button>
                 </div>
             </div>
         </div>
