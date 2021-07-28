@@ -15,8 +15,8 @@ type Tip = {
 
 const defaultTip: Tip = {
     bill: 0,
-    selectTip: 5,
-    numberOfPeople: 1,
+    selectTip: 0,
+    numberOfPeople: 0,
     tipAmount: 0,
     total: 0
 }
@@ -29,33 +29,60 @@ function App() {
     };
 
     function handleBill(event: React.ChangeEvent<HTMLInputElement>) {
-        tip.bill = parseFloat(event.currentTarget.value);
-        if (isNaN(tip.bill)) {
+        let bill = parseFloat(event.currentTarget.value);
+        if (isNaN(bill)) {
             tip.bill = 0;
-        }
-        handleTipAmount()
+        } else tip.bill = bill;
+        handleTipAmount();
+        handleTotal();
     }
 
     function handleNumberOfPeople(event: React.ChangeEvent<HTMLInputElement>) {
-        tip.numberOfPeople = parseInt(event.currentTarget.value);
-        if (isNaN(tip.numberOfPeople)) {
+        let numberOfPeople = parseInt(event.currentTarget.value);
+        if (isNaN(numberOfPeople)) {
             tip.numberOfPeople = 1;
+        } else {
+            tip.numberOfPeople = numberOfPeople;
         }
         handleTipAmount();
-
+        handleTotal();
     }
 
-    function handleSelectTip(event: React.ChangeEvent<HTMLInputElement>) {
+    function handleSelectTip(num: number) {
+        tip.selectTip = num;
+        handleTipAmount();
+        handleTotal();
+    }
+
+    function handleCustomSelectTip(event: React.ChangeEvent<HTMLInputElement>) {
         tip.selectTip = parseFloat(event.currentTarget.value);
+        handleTipAmount();
+        handleTotal();
     }
 
     function handleTipAmount() {
-        let value = ((tip.selectTip * tip.bill) / 100) / tip.numberOfPeople;
-        onChangeTip("tipAmount", value)
+        if (tip.selectTip !== 0 && tip.numberOfPeople !== 0) {
+            let value = ((tip.selectTip * tip.bill) / 100) / tip.numberOfPeople;
+            tip.tipAmount = value;
+            onChangeTip("tipAmount", value);
+        }
+
+    }
+
+    function handleTotal() {
+        if (tip.selectTip !== 0 && tip.numberOfPeople !== 0) {
+            let tipValue = (tip.selectTip * tip.bill) / 100;
+            let total = tipValue + tip.bill;
+            tip.total = total;
+            onChangeTip("total", total);
+        }
     }
 
     function handleReset() {
-        setTip(defaultTip);
+        tip.total = 0;
+        tip.tipAmount = 0;
+        onChangeTip("total", 0);
+        onChangeTip("tipAmount", 0);
     }
 
     return (
@@ -77,12 +104,13 @@ function App() {
                 <div className="Tip">
                     <h3 className="Bill-Text">Select Tip %</h3>
                     <div className="Tip-Grid">
-                        <button>5%</button>
-                        <button>10%</button>
-                        <button>15%</button>
-                        <button>20%</button>
-                        <button>25%</button>
-                        <input id="number" type="number" placeholder="Custom" className="Custom-Tip"/>
+                        <button onClick={() => handleSelectTip(5)}>5%</button>
+                        <button onClick={() => handleSelectTip(10)}>10%</button>
+                        <button onClick={() => handleSelectTip(15)}>15%</button>
+                        <button onClick={() => handleSelectTip(20)}>20%</button>
+                        <button onClick={() => handleSelectTip(25)}>25%</button>
+                        <input id="number" type="number" placeholder="Custom" className="Custom-Tip"
+                               onChange={handleCustomSelectTip}/>
                     </div>
                 </div>
                 <div className="Bill">
