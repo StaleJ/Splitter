@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Splitter/static/css/main.7efca6d0.chunk.css",
+    "main.js": "/Splitter/static/js/main.f42f73be.chunk.js",
+    "main.js.map": "/Splitter/static/js/main.f42f73be.chunk.js.map",
+    "runtime-main.js": "/Splitter/static/js/runtime-main.50d9ba25.js",
+    "runtime-main.js.map": "/Splitter/static/js/runtime-main.50d9ba25.js.map",
+    "static/js/2.2dbbcd92.chunk.js": "/Splitter/static/js/2.2dbbcd92.chunk.js",
+    "static/js/2.2dbbcd92.chunk.js.map": "/Splitter/static/js/2.2dbbcd92.chunk.js.map",
+    "static/js/3.58af32c5.chunk.js": "/Splitter/static/js/3.58af32c5.chunk.js",
+    "static/js/3.58af32c5.chunk.js.map": "/Splitter/static/js/3.58af32c5.chunk.js.map",
+    "index.html": "/Splitter/index.html",
+    "static/css/main.7efca6d0.chunk.css.map": "/Splitter/static/css/main.7efca6d0.chunk.css.map",
+    "static/js/2.2dbbcd92.chunk.js.LICENSE.txt": "/Splitter/static/js/2.2dbbcd92.chunk.js.LICENSE.txt",
+    "static/media/icon-person.65bfd204.svg": "/Splitter/static/media/icon-person.65bfd204.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50d9ba25.js",
+    "static/js/2.2dbbcd92.chunk.js",
+    "static/css/main.7efca6d0.chunk.css",
+    "static/js/main.f42f73be.chunk.js"
+  ]
+}
