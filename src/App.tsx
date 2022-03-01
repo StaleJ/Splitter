@@ -97,7 +97,7 @@ function App() {
                     <div className="Bill-Input-Field">
                         <img src={IconDollar} alt="Dollar icon" className="Dollar-Icon"/>
                         <input id="number" type="number" placeholder="0" className="Bill-Input"
-                               onChange={handleBill}
+                               onChange={handleBill} autoComplete="off"
                         />
                     </div>
                 </div>
@@ -109,7 +109,7 @@ function App() {
                         <button onClick={() => handleSelectTip(15)}>15%</button>
                         <button onClick={() => handleSelectTip(20)}>20%</button>
                         <button onClick={() => handleSelectTip(25)}>25%</button>
-                        <input id="number" type="number" placeholder="Custom" className="Custom-Tip"
+                        <input id="number" autoComplete='off' type="number" placeholder="Custom" className="Custom-Tip"
                                onChange={handleCustomSelectTip}/>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ function App() {
                     <h3 className="Bill-Text">Number of People</h3>
                     <div className="Bill-Input-Field">
                         <img src={IconPerson} alt="Person icon" className="Person-Icon"/>
-                        <input id="number" type="number" placeholder="0" className="Bill-Input"
+                        <input id="number" autoComplete='off' type="number" placeholder="0" className="Bill-Input"
                                onChange={handleNumberOfPeople}/>
                     </div>
                 </div>
