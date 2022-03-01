@@ -95,7 +95,7 @@ function App() {
                 <div className="Bill">
                     <h3 className="Bill-Text">Bill</h3>
                     <div className="Bill-Input-Field">
-                        <img src={IconDollar} alt="Dollar icon" className="Dollar-Icon"/>
+                        <div className="Dollar-Icon">NOK</div>
                         <input id="number" type="number" placeholder="0" className="Bill-Input"
                                onChange={handleBill} autoComplete="off"
                         />
@@ -124,10 +124,10 @@ function App() {
                 <div className="Amount">
                     <h3 className="Tip-h3">Tip Amount</h3>
                     <h4 className="Tip-h4">/ person</h4>
-                    <h1 className="Tip-h1">${tip.tipAmount}</h1>
+                    <h1 className="Tip-h1">{tip.tipAmount}</h1>
                     <h3 className="Total-h3">Total</h3>
                     <h4 className="Total-h4">/ person</h4>
-                    <h1 className="Total-h1">${tip.total}</h1>
+                    <h1 className="Total-h1">{tip.total}</h1>
                     <button className="Amount-Reset" onClick={handleReset}>Reset</button>
                 </div>
             </div>

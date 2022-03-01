@@ -74,12 +74,6 @@ input:focus::placeholder {
     border-width: 0.15em;
 }
 
-.Dollar-Icon {
-    width: 8px;
-    height: 16px;
-    vertical-align: middle;
-
-}
 
 .Person-Icon {
     width: 14px;
