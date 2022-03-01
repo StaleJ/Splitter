@@ -1,5 +1,4 @@
 import './index.css'
-import IconDollar from "./Static/icon-dollar.svg";
 import IconPerson from "./Static/icon-person.svg";
 import React, {useState} from "react";
 
